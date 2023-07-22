@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import '../../../constants/size_contants.dart';
 
 class SensorSwitch extends StatelessWidget {
   const SensorSwitch({
@@ -18,9 +19,12 @@ class SensorSwitch extends StatelessWidget {
       valueListenable: valueNotifier,
       builder: (context, value, child) => RotatedBox(
         quarterTurns: isHomeSwitch ? 1 : 0,
-        child: CupertinoSwitch(
-          value: value,
-          onChanged: onChanged,
+        child: Transform.scale(
+          scale: switchScale,
+          child: CupertinoSwitch(
+            value: value,
+            onChanged: onChanged,
+          ),
         ),
       ),
     );

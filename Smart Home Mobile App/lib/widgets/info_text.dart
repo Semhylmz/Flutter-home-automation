@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constants/size_contants.dart';
 
 class SwitchInfoText extends StatelessWidget {
   const SwitchInfoText({
@@ -23,7 +24,7 @@ class SwitchInfoText extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             maxLines: 2,
             style: const TextStyle(
-              fontSize: 20.0,
+              fontSize: infoTextSize,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -32,7 +33,7 @@ class SwitchInfoText extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             maxLines: 2,
             style: const TextStyle(
-              fontSize: 12.0,
+              fontSize: infoTextDescSize,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -43,7 +44,7 @@ class SwitchInfoText extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                   style: const TextStyle(
-                    fontSize: 10.0,
+                    fontSize: infoTextOptionalSize,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

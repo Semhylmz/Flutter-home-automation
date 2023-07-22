@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../constants/contants.dart';
+import '../constants/size_contants.dart';
 
-class TitleWidget extends StatelessWidget {
-  const TitleWidget({
+class HeadWidget extends StatelessWidget {
+  const HeadWidget({
     super.key,
     required this.title,
   });

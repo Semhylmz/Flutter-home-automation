@@ -21,10 +21,11 @@ class SensorCard extends StatelessWidget {
     return InkWell(
       onTap: () {
         idx == 0
-            ? Navigator.push(
+            ? showBottomSheet(context: context, builder: (context) => LedPage(valueNotifier: notifier),)
+        /*Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => LedPage(valueNotifier: notifier)))
+                    builder: (context) => LedPage(valueNotifier: notifier)))*/
             : idx == 1
                 ? Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const TempPage()))

@@ -39,8 +39,7 @@ dependencies:
   flutter_bluetooth_serial: ^0.4.0
   shared_preferences: any
   fluttertoast: any
-
-  flutter_blue_plus: ^1.5.2
+  flutter_circle_color_picker: ^0.3.0
 
 dev_dependencies:
   flutter_test:

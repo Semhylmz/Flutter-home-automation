@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home/view/home_view/widgets/sensor_switch.dart';
-import '../../../constants/contants.dart';
+import '../../../constants/size_contants.dart';
 import '../../../constants/lists.dart';
 import '../../../notifier/bluetooth_notifier.dart';
 import 'sensor_temp_card.dart';
@@ -50,14 +50,15 @@ class SensorListCard extends StatelessWidget {
                 ),
                 Expanded(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
                         child: Text(
                           smartDevices[idx].title,
-                          maxLines: 2,
+                          maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                              fontSize: 18.0,
+                              fontSize: sensorCardInfoSize,
                               fontWeight: FontWeight.bold,
                               color: idx == 0
                                   ? notifier.ledNotifier.value

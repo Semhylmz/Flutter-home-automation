@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
+import 'package:smart_home/constants/size_contants.dart';
 
 class BluetoothDeviceList extends ListTile {
   BluetoothDeviceList({
@@ -11,7 +12,7 @@ class BluetoothDeviceList extends ListTile {
   }) : super(
           onTap: onTap,
           enabled: enabled,
-          leading: const Icon(Icons.devices_outlined),
+          leading: const Icon(Icons.devices_outlined, size: iconSize),
           title: Text(device.name ?? 'Unkown device'),
           subtitle: device.isBonded
               ? const Text('Secure connection ready')

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:smart_home/widgets/title_widget.dart';
-import '../../../constants/contants.dart';
+import 'package:smart_home/widgets/head_widget.dart';
+import '../../../constants/size_contants.dart';
 import '../../add_device_view/add_bluetooth_device_view.dart';
 
 class HomeInfo extends StatelessWidget {
@@ -16,7 +16,7 @@ class HomeInfo extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 20.0),
+        const SizedBox(height: homeSizedHeight),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: hPadding),
           child: Row(
@@ -27,13 +27,16 @@ class HomeInfo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Hello',
-                      style:
-                          TextStyle(fontSize: 20.0, color: Colors.grey[700])),
-                  const Text('Semih', style: TextStyle(fontSize: 54.0)),
-                  /*Text(
-                    'Temperature today X°',
-                    style: TextStyle(fontSize: 20.0, color: Colors.grey[700]),
-                  ),*/
+                      style: TextStyle(
+                          fontSize: infoTextSize, color: Colors.grey[700])),
+                  const Text('Semih',
+                      style: TextStyle(fontSize: infoTextSize * 2)),
+                  // Text(
+                  //   'Temperature today X°',
+                  //   style: TextStyle(
+                  //       fontSize: infoTextOptionalSize,
+                  //       color: Colors.grey[700]),
+                  // ),
                 ],
               ),
               InkWell(
@@ -70,8 +73,8 @@ class HomeInfo extends StatelessWidget {
                 )
               : Divider(thickness: 1.0, color: Colors.grey[400]),
         ),
-        const SizedBox(height: 20.0),
-        const TitleWidget(title: 'Connection Status')
+        const SizedBox(height: homeSizedHeight),
+        const HeadWidget(title: 'Connection Status')
       ],
     );
   }

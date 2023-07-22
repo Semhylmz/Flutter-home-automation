@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home/widgets/info_text.dart';
-import '../../../../constants/contants.dart';
+import '../../../../constants/size_contants.dart';
 import '../../../../notifier/saved_device_info.dart';
 
 class DeviceInfo extends StatelessWidget {
@@ -32,7 +32,7 @@ class DeviceInfo extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Icon(
                 icon,
-                size: 32.0,
+                size: iconSize,
               ),
             ),
             SwitchInfoText(
