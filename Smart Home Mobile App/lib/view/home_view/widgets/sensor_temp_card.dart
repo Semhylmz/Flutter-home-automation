@@ -13,19 +13,17 @@ class SensorTempCardInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ValueListenableBuilder(
-        valueListenable: notifier.tempNotifier,
-        builder: (context, value, child) => Text(
-          notifier.isConnected()
-              ? value.contains("Data's being taken.")
-                  ? "Data's being taken."
-                  : '$value°'
-              : '',
-          maxLines: 2,
-          style: const TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white),
-        ),
+    return ValueListenableBuilder(
+      valueListenable: notifier.tempNotifier,
+      builder: (context, value, child) => Text(
+        notifier.isConnected()
+            ? value.contains("Data's being taken.")
+                ? "Data's being taken."
+                : '$value°'
+            : '',
+        maxLines: 2,
+        style: const TextStyle(
+            fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.black),
       ),
     );
   }
