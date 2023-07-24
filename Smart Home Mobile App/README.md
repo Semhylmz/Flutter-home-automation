@@ -5,4 +5,4 @@ A new Flutter project.
 
 This project is a starting point for a Flutter application.
 
-![](C:/Users/Semh-/Desktop/smart_home_app.png)
+![smart_home_app](https://github.com/Semhylmz/Flutter-home-automation/assets/55411723/e5d6e068-2f68-4203-94b2-f16c41ded2f0)
