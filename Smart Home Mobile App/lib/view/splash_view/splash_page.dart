@@ -32,6 +32,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void routePage() {
+    
     Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(builder: (context) => const HomePage()),
         (route) => false);

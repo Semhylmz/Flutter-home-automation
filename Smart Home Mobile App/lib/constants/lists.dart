@@ -9,20 +9,20 @@ List ledAnimationName = [
   'TheaterChaseRainbow '
 ];
 
-List<SensorModel> smartDevices = <SensorModel>[
-  SensorModel(
+List<SensorInfoModel> smartDevices = <SensorInfoModel>[
+  SensorInfoModel(
       title: 'Neopixel Led',
       path: 'Icons.lightbulb_outline_rounded',
       icon: Icons.blur_on_outlined),
-  SensorModel(
+  SensorInfoModel(
       title: 'Temperature',
       path: 'Icons.thermostat_outlined',
       icon: Icons.thermostat_outlined),
-  SensorModel(
+  SensorInfoModel(
       title: 'Lamp',
       path: 'Icons.graphic_eq_outlined',
       icon: Icons.lightbulb_outline_rounded),
-  SensorModel(
+  SensorInfoModel(
       title: 'Motion Sensor',
       path: 'Icons.directions_walk_outlined',
       icon: Icons.directions_walk_outlined),

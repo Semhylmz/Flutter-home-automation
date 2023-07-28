@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 
-class SensorModel {
+class SensorInfoModel {
   final String title, path;
   final IconData icon;
 
-  SensorModel({
+  SensorInfoModel({
     required this.title,
     required this.path,
     required this.icon,

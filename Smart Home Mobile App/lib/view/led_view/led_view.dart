@@ -8,9 +8,9 @@ import '../../constants/size_contants.dart';
 import '../../widgets/info_text.dart';
 
 class LedPage extends StatefulWidget {
-  const LedPage({Key? key, required this.valueNotifier}) : super(key: key);
+  const LedPage({Key? key, this.valueNotifier}) : super(key: key);
 
-  final BluetoothConnectionNotifier valueNotifier;
+  final BluetoothConnectionNotifier? valueNotifier;
 
   @override
   State<LedPage> createState() => _LedPageState();
@@ -65,16 +65,16 @@ class _LedPageState extends State<LedPage> {
                         ),
                         SwitchInfoText(
                             title: 'Neopixel Led',
-                            subTitle: widget.valueNotifier.ledNotifier.value
+                            subTitle: widget.valueNotifier!.ledNotifier.value
                                 ? 'On'
                                 : 'Off'),
                         SensorSwitch(
                             isHomeSwitch: false,
                             onChanged: (bool value) {
-                              widget.valueNotifier.changeLedState();
+                              widget.valueNotifier!.changeLedState();
                               setState(() {});
                             },
-                            valueNotifier: widget.valueNotifier.ledNotifier),
+                            valueNotifier: widget.valueNotifier!.ledNotifier),
                       ],
                     ),
                   ),
