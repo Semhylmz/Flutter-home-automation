@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smart_home/view/home_view/widgets/sensor_switch.dart';
 import '../../../constants/size_contants.dart';
 import '../../../constants/lists.dart';
-import '../../../notifier/bluetooth_notifier.dart';
+import '../../../notifier/bluetooth_serial_notifier.dart';
 import 'sensor_temp_card.dart';
 
 class SensorListCard extends StatelessWidget {
@@ -13,7 +13,7 @@ class SensorListCard extends StatelessWidget {
     required this.onChanged,
   });
 
-  final BluetoothConnectionNotifier notifier;
+  final BluetoothSerialNotifier notifier;
   final int idx;
   final void Function(bool p1)? onChanged;
 

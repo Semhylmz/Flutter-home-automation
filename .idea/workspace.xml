@@ -5,17 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9284b5e6-2d1c-47e6-809c-7c47bdf9203f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/model/sensors_data_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/utils/app_router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Smart Home.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Smart Home.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/constants/colors.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/bluetooth_off_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/my_app.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/constants/lists.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/constants/lists.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/model/sensor_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/model/sensor_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/constants/size_contants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/constants/size_contants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/model/sensors_data_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/model/sensors_data_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/notifier/bluetooth_notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/notifier/bluetooth_serial_notifier.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/notifier/sensor_data_notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/notifier/sensor_data_notifier.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/theme/theme_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/theme/theme_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/add_device_view/add_bluetooth_device_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/add_device_view/add_bluetooth_device_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/add_device_view/widgets/bluetooth_device_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/add_device_view/widgets/bluetooth_device_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/home_view/home_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/home_view/home_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/home_view/widgets/sensor_cards.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/home_view/widgets/sensor_cards.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/home_view/widgets/sensor_neopixel_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/home_view/widgets/sensor_neopixel_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/home_view/widgets/sensor_temp_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/home_view/widgets/sensor_temp_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/home_view/widgets/sensors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/home_view/widgets/sensors.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/led_view/led_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/led_view/led_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/led_view/widget/led_animation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/led_view/widget/led_animation.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/splash_view/splash_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/lib/view/splash_view/splash_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart Home Mobile App/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Smart Home Mobile App/test/widget_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,19 +54,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Proje/Smart Home&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "D:/Yazilim/Flutter/StateManagement",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/Smart Home Mobile App/lib/main.dart" />

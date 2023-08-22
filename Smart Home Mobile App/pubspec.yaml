@@ -36,21 +36,28 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   provider: any
-  riverpod: ^2.3.6
-  flutter_riverpod: ^2.3.6
-  hooks_riverpod: ^2.3.7
-  riverpod_generator: ^2.2.4
+  #riverpod: ^2.3.6
+  #flutter_riverpod: ^2.3.6
+  #hooks_riverpod: ^2.3.7
+  #riverpod_generator: ^2.2.4
   flutter_bluetooth_serial: ^0.4.0
-  quick_blue: any
   shared_preferences: any
   fluttertoast: any
   flutter_circle_color_picker: ^0.3.0
   go_router: any
-  freezed: ^2.4.1
+  #freezed: ^2.4.1
+  #freezed_annotation: ^2.4.1
+  #json_annotation: ^4.8.1
+
+  flutter_blue_plus: any
+  #flutter_blue: any
+  sleek_circular_slider: any
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: ^2.4.6
+  json_serializable: ^6.7.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
-import 'package:smart_home/model/device_model.dart';
+import 'package:smart_home/constants/colors.dart';
 import 'package:smart_home/notifier/saved_device_info.dart';
-import 'package:smart_home/widgets/info_text.dart';
 import 'package:smart_home/widgets/head_widget.dart';
 import 'package:smart_home/widgets/add_bluetooth_device_appbar.dart';
 import '../../../constants/size_contants.dart';
+import '../../model/device_model.dart';
+import '../../widgets/info_text.dart';
 import '../home_view/home_view.dart';
 import 'widgets/bluetooth_device_list.dart';
 import 'widgets/device_info.dart';
@@ -101,7 +102,7 @@ class _AddBluetoothDevicePageState extends State<AddBluetoothDevicePage> {
                     horizontal: hPadding, vertical: vPadding),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.grey[200],
+                    color: colorCard,
                     borderRadius: BorderRadius.circular(24.0),
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 25.0),
@@ -181,22 +182,22 @@ class _AddBluetoothDevicePageState extends State<AddBluetoothDevicePage> {
                             ),
                           ),
                           isDiscovering
-                              ? const Text('')
+                              ? const SizedBox.shrink()
                               : _bluetoothState.isEnabled
                                   ? IconButton(
                                       onPressed: _restartDiscovery,
                                       icon: const Icon(Icons.replay_outlined),
                                     )
-                                  : const Text('')
+                                  : const SizedBox.shrink()
                         ],
                       ),
                       const SizedBox(height: 8.0),
                       isDiscovering
                           ? LinearProgressIndicator(
-                              color: Colors.grey[200],
+                              color: colorCard,
                               backgroundColor: Colors.black,
                             )
-                          : const SizedBox(width: 0.0, height: 0.0),
+                          : const SizedBox.shrink(),
                       SingleChildScrollView(
                         child: ListView.builder(
                           itemCount: results.length,
@@ -204,22 +205,25 @@ class _AddBluetoothDevicePageState extends State<AddBluetoothDevicePage> {
                           physics: const BouncingScrollPhysics(),
                           itemBuilder: (context, idx) {
                             return BluetoothDeviceList(
-                              device: results[idx].device,
-                              rssi: results[idx].rssi,
+                              result: results[idx],
                               onTap: () async {
                                 if (results[idx].device != null) {
                                   temp.add(DeviceModel(
                                       deviceName: results[idx].device.name ??
                                           'Unkown device',
-                                      deviceAddress: results[idx].device.address));
+                                      deviceAddress:
+                                          results[idx].device.address));
 
-                                  deviceInfo.saveDevice(deviceInfo: temp).then((_) {
+                                  deviceInfo
+                                      .saveDevice(deviceInfo: temp)
+                                      .then((_) {
                                     temp.clear();
                                     Fluttertoast.showToast(msg: 'Device added');
                                     Navigator.pushAndRemoveUntil(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => const HomePage(),
+                                          builder: (context) =>
+                                              const HomePage(),
                                         ),
                                         (route) => false);
                                   });

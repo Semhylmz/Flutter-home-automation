@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_home/notifier/bluetooth_notifier.dart';
+import 'package:smart_home/notifier/bluetooth_serial_notifier.dart';
 import 'package:smart_home/view/home_view/widgets/sensor_cards.dart';
 import 'package:smart_home/view/led_view/led_view.dart';
 import '../../temp_view/temp_view.dart';
@@ -12,7 +12,7 @@ class SensorCard extends StatelessWidget {
     this.onChanged,
   });
 
-  final BluetoothConnectionNotifier notifier;
+  final BluetoothSerialNotifier notifier;
   final int idx;
   final void Function(bool)? onChanged;
 

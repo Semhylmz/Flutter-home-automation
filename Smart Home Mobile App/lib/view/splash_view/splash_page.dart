@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:smart_home/notifier/bluetooth_notifier.dart';
+import 'package:smart_home/notifier/bluetooth_serial_notifier.dart';
 import '../../notifier/saved_device_info.dart';
 import '../home_view/home_view.dart';
 
@@ -22,17 +22,15 @@ class _SplashPageState extends State<SplashPage> {
 
   Future<void> setProviders() async {
     await Provider.of<DeviceNotifier>(context, listen: false).init().then(
-          (_) =>
-              Provider.of<BluetoothConnectionNotifier>(context, listen: false)
-                  .initBluetoothState()
-                  .then(
-                    (_) => routePage(),
-                  ),
+          (_) => Provider.of<BluetoothSerialNotifier>(context, listen: false)
+              .initBluetoothState()
+              .then(
+                (_) => routePage(),
+              ),
         );
   }
 
   void routePage() {
-    
     Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(builder: (context) => const HomePage()),
         (route) => false);

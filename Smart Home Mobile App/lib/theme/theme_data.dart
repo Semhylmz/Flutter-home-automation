@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-ThemeData themeData = ThemeData(
-  scaffoldBackgroundColor: Colors.grey[300],
+import '../constants/colors.dart';
+
+ThemeData appTheme = ThemeData(
+  scaffoldBackgroundColor: colorBackground,
   appBarTheme: AppBarTheme(
     systemOverlayStyle: SystemUiOverlayStyle(
-      statusBarColor: Colors.grey[300],
+      statusBarColor: colorBackground,
       statusBarIconBrightness: Brightness.dark,
       statusBarBrightness: Brightness.dark,
-      systemNavigationBarColor: Colors.grey[300],
+      systemNavigationBarColor: colorBackground,
       systemNavigationBarIconBrightness: Brightness.dark,
     ),
   ),

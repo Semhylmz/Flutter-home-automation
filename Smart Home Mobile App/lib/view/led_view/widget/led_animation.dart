@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:smart_home/notifier/bluetooth_notifier.dart';
+import 'package:smart_home/notifier/bluetooth_serial_notifier.dart';
 import '../../../constants/lists.dart';
 
 class LedAnimation extends StatelessWidget {
@@ -33,13 +33,13 @@ class LedAnimation extends StatelessWidget {
             ),
             ValueListenableBuilder(
               valueListenable:
-                  context.watch<BluetoothConnectionNotifier>().ledAnimNotifier,
+                  context.watch<BluetoothSerialNotifier>().ledAnimNotifier,
               builder: (context, value, child) => Radio(
                 value: ledAnimationName[idx],
                 groupValue: value,
                 activeColor: Colors.green,
                 onChanged: (value) {
-                  Provider.of<BluetoothConnectionNotifier>(context,
+                  Provider.of<BluetoothSerialNotifier>(context,
                           listen: false)
                       .changeLedAnimation(value);
                 },

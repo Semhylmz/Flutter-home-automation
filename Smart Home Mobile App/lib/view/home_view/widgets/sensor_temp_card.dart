@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../notifier/bluetooth_notifier.dart';
+import '../../../notifier/bluetooth_serial_notifier.dart';
 
 class SensorTempCardInfo extends StatelessWidget {
   const SensorTempCardInfo({
@@ -8,7 +8,7 @@ class SensorTempCardInfo extends StatelessWidget {
     required this.idx,
   });
 
-  final BluetoothConnectionNotifier notifier;
+  final BluetoothSerialNotifier notifier;
   final int idx;
 
   @override

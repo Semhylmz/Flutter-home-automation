@@ -4,7 +4,7 @@ import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'package:smart_home/constants/lists.dart';
 import 'package:smart_home/notifier/saved_device_info.dart';
 
-class BluetoothConnectionNotifier extends ChangeNotifier {
+class BluetoothSerialNotifier extends ChangeNotifier {
   BluetoothState _bluetoothState = BluetoothState.UNKNOWN;
 
   var _bluetoothConnection;

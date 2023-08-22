@@ -5,42 +5,45 @@ import 'package:smart_home/constants/size_contants.dart';
 class BluetoothDeviceList extends ListTile {
   BluetoothDeviceList({
     super.key,
-    required BluetoothDevice device,
-    required rssi,
+    required BluetoothDiscoveryResult result,
     required GestureTapCallback onTap,
     bool enabled = true,
   }) : super(
           onTap: onTap,
           enabled: enabled,
           leading: const Icon(Icons.devices_outlined, size: iconSize),
-          title: Text(device.name ?? 'Unkown device'),
-          subtitle: device.isBonded
+          title: Text(
+            result.device.name!.isEmpty || result.device.name! == null
+                ? 'Unkown device'
+                : result.device.name!,
+          ),
+          subtitle: result.device.isBonded
               ? const Text('Secure connection ready')
-              : const SizedBox(width: 0.0, height: 0.0),
+              : const Text("Cannot connect to this device"),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              rssi != null
+              result.rssi != null
                   ? Container(
                       margin: const EdgeInsets.all(8.0),
                       child: DefaultTextStyle(
-                        style: _computeTextStyle(rssi),
+                        style: _computeTextStyle(result.rssi),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
-                            Text(rssi.toString()),
+                            Text(result.rssi.toString()),
                             const Text('dBm'),
                           ],
                         ),
                       ),
                     )
                   : const SizedBox(width: 0, height: 0),
-              device.isConnected
-                  ? const Icon(Icons.bluetooth_connected_outlined)
-                  : const SizedBox(width: 0, height: 0),
-              device.isBonded
-                  ? const Icon(Icons.bluetooth_disabled_outlined)
-                  : const SizedBox(width: 0, height: 0),
+              // device.isConnected
+              //     ? const Icon(Icons.bluetooth_connected_outlined)
+              //     : const SizedBox(width: 0, height: 0),
+              // device.isBonded
+              //     ? const Icon(Icons.bluetooth_disabled_outlined)
+              //     : const SizedBox(width: 0, height: 0),
             ],
           ),
         );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_circle_color_picker/flutter_circle_color_picker.dart';
-import 'package:smart_home/notifier/bluetooth_notifier.dart';
+import 'package:smart_home/notifier/bluetooth_serial_notifier.dart';
 import 'package:smart_home/view/home_view/widgets/sensor_switch.dart';
 import 'package:smart_home/widgets/head_widget.dart';
 import 'package:smart_home/widgets/add_bluetooth_device_appbar.dart';
@@ -10,7 +10,7 @@ import '../../widgets/info_text.dart';
 class LedPage extends StatefulWidget {
   const LedPage({Key? key, this.valueNotifier}) : super(key: key);
 
-  final BluetoothConnectionNotifier? valueNotifier;
+  final BluetoothSerialNotifier? valueNotifier;
 
   @override
   State<LedPage> createState() => _LedPageState();

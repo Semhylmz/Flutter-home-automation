@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
-import 'package:smart_home/notifier/bluetooth_notifier.dart';
+import 'package:smart_home/constants/colors.dart';
+import 'package:smart_home/notifier/bluetooth_serial_notifier.dart';
 import 'package:smart_home/notifier/saved_device_info.dart';
 import 'package:smart_home/view/home_view/widgets/home_info.dart';
-import 'package:smart_home/widgets/add_bluetooth_device_appbar.dart';
 import 'package:smart_home/widgets/info_text.dart';
 import '../../constants/size_contants.dart';
 import '../../constants/lists.dart';
@@ -24,18 +24,18 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   void dispose() {
-    Provider.of<BluetoothConnectionNotifier>(context, listen: false)
+    Provider.of<BluetoothSerialNotifier>(context, listen: false)
         .disposeMethod();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    Provider.of<BluetoothConnectionNotifier>(context, listen: true)
+    Provider.of<BluetoothSerialNotifier>(context, listen: true)
         .initBluetoothStream();
 
     return Scaffold(
-      body: Consumer<BluetoothConnectionNotifier>(
+      body: Consumer<BluetoothSerialNotifier>(
         builder: (context, valueNotifier, child) => SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                     horizontal: hPadding, vertical: vPadding),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.grey[200],
+                    color: colorCard,
                     borderRadius: BorderRadius.circular(24.0),
                   ),
                   padding: const EdgeInsets.symmetric(

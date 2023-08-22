@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import '../../../notifier/bluetooth_notifier.dart';
+import '../../../notifier/bluetooth_serial_notifier.dart';
 
 class SensorNeoPixelCardInfo extends StatelessWidget {
   const SensorNeoPixelCardInfo({
@@ -8,7 +8,7 @@ class SensorNeoPixelCardInfo extends StatelessWidget {
     required this.onChanged,
   });
 
-  final BluetoothConnectionNotifier notifier;
+  final BluetoothSerialNotifier notifier;
   final void Function(bool p1)? onChanged;
 
   @override
